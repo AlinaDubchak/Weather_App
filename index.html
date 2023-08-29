@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/935fab0574.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather App ☀</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8" id="main">
+          <div class="head">
+            <span class="day"> 08 August 2023</span>
+            <span class="time">11:00</span>
+          </div>
+          <span id="selectedLocation">Paris</span>
+          <h1>Sunny</h1>
+          <hr />
+          <section class="bottom">
+            <div class="row" id="bottom-panel">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col" id="last-child">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">11:00</h5>
+                    <i class="fa-solid fa-sun" id="weather-icon"></i>
+                    <h5 class="card-title">10℃</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col" id="right-panel">
+          <section class="panel-head">
+            <i class="fa-solid fa-location-dot" id="location"></i>
+            <select class="custom-select" id="locationSelect">
+              <option selected>Choose</option>
+              <option value="1">Kyiv, Ukraine</option>
+              <option value="2">Tbilisi, Georgia</option>
+              <option value="3">Paris, France</option>
+            </select>
+            <i class="fa-solid fa-caret-down" id="carret"></i>
+            <button class="btn_search" id="searchButton">Search</button>
+          </section>
+          <div class="main_temp">
+            <h1 class="inline">22℃</h1>
+            <a href="" class="farenheit">℉</a>
+            <a href="" class="celcius">℃</a>
+          </div>
+
+          <p><i class="fa-solid fa-wind"></i> Northwest, 38.9 km/h</p>
+          <hr />
+          <h5><strong>The Next Day Forecast</strong></h5>
+          <section class="next-day-forecast">
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">Friday August 09</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">Friday August 10</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">Friday August 11</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">Friday August 12</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">Friday August 13</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
