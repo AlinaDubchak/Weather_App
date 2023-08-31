@@ -22,6 +22,7 @@
       src="https://kit.fontawesome.com/935fab0574.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App ☀</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
             <span class="time">11:00</span>
           </div>
           <span id="selectedLocation">Paris</span>
-          <h1>Sunny</h1>
+          <h1 id="weather-h1">Sunny</h1>
           <hr />
           <section class="bottom">
             <div class="row" id="bottom-panel">
@@ -106,22 +107,30 @@
         <div class="col" id="right-panel">
           <section class="panel-head">
             <i class="fa-solid fa-location-dot" id="location"></i>
-            <select class="custom-select" id="locationSelect">
-              <option selected>Choose</option>
-              <option value="1">Kyiv, Ukraine</option>
-              <option value="2">Tbilisi, Georgia</option>
-              <option value="3">Paris, France</option>
-            </select>
-            <i class="fa-solid fa-caret-down" id="carret"></i>
+            <form action="" id="form-search">
+              <input
+                type="search"
+                class="custom-select"
+                placeholder="Search"
+                id="city-input"
+              />
+            </form>
+
             <button class="btn_search" id="searchButton">Search</button>
           </section>
           <div class="main_temp">
-            <h1 class="inline">22℃</h1>
+            <a href="" class="curLocation"
+              >📍 Weather in your current location</a
+            ><br />
+            <h1 class="inline" style="margin-top: -20px">22℃</h1>
             <a href="" class="farenheit">℉</a>
             <a href="" class="celcius">℃</a>
           </div>
-
-          <p><i class="fa-solid fa-wind"></i> Northwest, 38.9 km/h</p>
+          <p>
+            <i class="fa-solid fa-wind"></i>
+            <span id="direction">Northwest</span>,
+            <span id="speed">38.9 m/sec</span>
+          </p>
           <hr />
           <h5><strong>The Next Day Forecast</strong></h5>
           <section class="next-day-forecast">
@@ -194,6 +203,15 @@
         </div>
       </div>
     </div>
+    <p class="author">
+      <a
+        href="https://github.com/AlinaDubchak/Weather_App"
+        class="link"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Alina Dubchak
+    </p>
     <script src="index.js"></script>
   </body>
 </html>

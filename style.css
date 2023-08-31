@@ -196,6 +196,12 @@ ul {
 }
 .custom-select {
   padding: 7px;
+  background-color: transparent;
+  width: 130px;
+  height: 30px;
+  margin: 3px 4px 2px 1px;
+  border: 1px solid #1c3404;
+  border-radius: 3px;
 }
 p {
   font-weight: lighter;
@@ -212,14 +218,17 @@ a {
 }
 .main_temp {
   text-align: center;
+  margin-top: 50px;
 }
 .celcius {
   left: -12px;
   top: 0px;
-}
-a:hover {
-  color: #1c3404;
   text-decoration: none;
+  color: #1c3404;
+}
+.farenheit {
+  text-decoration: none;
+  color: #1c3404;
 }
 .btn_search {
   border-radius: 10px;
@@ -237,4 +246,22 @@ a:hover {
   background-color: transparent;
   color: #1c3404;
   border: 1px solid #1c3404;
+}
+.curLocation {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1c3404;
+}
+.author {
+  margin: 15px 0px 0px 65px;
+  font-size: 20px;
+  color: #1c3404;
+  text-decoration: none;
+  font-weight: 700;
+}
+.link {
+  position: normal;
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
 }
