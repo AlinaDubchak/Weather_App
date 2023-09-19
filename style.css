@@ -1,11 +1,12 @@
 .container {
-  margin-top: 100px;
-  background-image: url(image/sun.jpg);
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #27374d;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  border: 15px solid #1c3404;
+  border: 15px solid #526d82;
   border-radius: 20px;
 
   font-family: Rubik, sans-serif;
@@ -43,8 +44,9 @@ div.card {
   background: rgba(255, 255, 255, 0.192);
   backdrop-filter: blur(10px);
   border-radius: 15px;
+  color: #dde6ed;
 
-  box-shadow: 5px 10px 15px rgb(207, 176, 72);
+  box-shadow: 5px 10px 15px #3c4955;
 }
 div.col {
   padding: 0px 24px 0px 0px;
@@ -59,37 +61,37 @@ div.col {
   justify-content: right;
   margin-right: 28px;
   margin-top: 10px;
-  color: #1c3404;
-  font-weight: 700;
+  color: #dde6ed;
+  font-weight: 500;
 }
 .time {
-  color: #1c3404;
+  color: #dde6ed;
 
   margin-right: 28px;
   font-size: 18px;
-  border-left: 2px solid #1c3404;
+  border-left: 2px solid #dde6ed;
   border-radius: 1px;
   padding-left: 10px;
 }
 .day {
-  color: #1c3404;
+  color: #dde6ed;
 
   font-size: 18px;
   padding-right: 10px;
 }
 #main h1 {
-  color: #1c3404;
+  color: #dde6ed;
 
   text-align: right;
   font-size: 70px;
-  font-weight: 700;
+  font-weight: 500;
 
   position: relative;
   top: 320px;
   right: 30px;
 }
 #main hr {
-  border: 1px solid #1c3404;
+  border: 1px solid #dde6ed;
   opacity: 1;
   border-radius: 2px;
   position: relative;
@@ -99,11 +101,12 @@ div.col {
   width: 767px;
 }
 #right-panel {
-  border-left: 2px solid #1c3404;
+  border-left: 1px solid #dde6ed;
   padding: 30px 20px 30px 20px;
 
-  background: rgba(255, 255, 255, 0.192);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
 }
 #location {
   font-size: 25px;
@@ -115,7 +118,7 @@ div.col {
   margin: auto;
   justify-content: space-between;
   width: 250px;
-  border: 1px solid #1c3404;
+  border: 1px solid #dde6ed;
   border-radius: 5px;
   padding: 3px;
 }
@@ -132,21 +135,21 @@ div.col {
   right: 15px;
 }
 #right-panel h1 {
-  color: #1c3404;
+  color: #dde6ed;
 
   font-size: 70px;
   text-align: center;
   margin: 30px 0 15px 0;
 }
 #right-panel p {
-  color: #1c3404;
+  color: #dde6ed;
 
   font-size: 18px;
   text-align: center;
   padding-bottom: 20px;
 }
 #right-panel hr {
-  border: 1px solid #1c3404;
+  border: 1px solid #dde6ed;
   opacity: 1;
   border-radius: 2px;
   margin-left: auto;
@@ -154,10 +157,12 @@ div.col {
   width: 350px;
 }
 h5 {
-  color: #1c3404;
-
   text-align: center;
   padding: 15px;
+}
+strong {
+  color: #dde6ed;
+  font-weight: 400;
 }
 #weather-icon {
   font-size: 30px;
@@ -167,30 +172,30 @@ h5 {
   margin: 5px 0 10px 0;
   text-align: center;
 
-  color: #1c3404;
+  color: #dde6ed;
 
   background: rgba(255, 255, 255, 0.192);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 15px;
 
-  box-shadow: 3px 5px 15px rgb(207, 176, 72);
+  box-shadow: 5px 10px 15px #323c44;
 }
 .next-day-forecast {
   margin-left: 20px;
 }
 li {
-  color: #1c3404;
+  color: #dde6ed;
 
   margin-left: -10px;
 }
 li:first-child {
-  font-weight: 900;
+  font-weight: 500;
 }
 li:last-child {
   opacity: 50%;
 }
 ul {
-  color: #1c3404;
+  color: #dde6ed;
 
   padding: 3px;
 }
@@ -200,7 +205,7 @@ ul {
   width: 130px;
   height: 30px;
   margin: 3px 4px 2px 1px;
-  border: 1px solid #1c3404;
+  border: 1px solid #dde6ed;
   border-radius: 3px;
 }
 p {
@@ -224,19 +229,19 @@ a {
   left: -12px;
   top: 0px;
   text-decoration: none;
-  color: #1c3404;
+  color: #dde6ed;
 }
 .farenheit {
   text-decoration: none;
-  color: #1c3404;
+  color: #dde6ed;
 }
 .btn_search {
   border-radius: 10px;
   background-color: transparent;
   padding: 5px;
   border: none;
-  background-color: #1c3404;
-  color: white;
+  background-color: #27374d;
+  color: #dde6ed;
   font-size: 14px;
 
   width: 100px;
@@ -244,18 +249,18 @@ a {
 }
 .btn_search:hover {
   background-color: transparent;
-  color: #1c3404;
-  border: 1px solid #1c3404;
+  color: #dde6ed;
+  border: 1px solid #dde6ed;
 }
 .curLocation {
   font-size: 14px;
   text-decoration: none;
-  color: #1c3404;
+  color: #dde6ed;
 }
 .author {
-  margin: 15px 0px 0px 280px;
+  margin: 15px 0px 0px 310px;
   font-size: 20px;
-  color: #1c3404;
+  color: black;
   text-decoration: none;
   font-weight: 700;
 }
@@ -264,4 +269,10 @@ a {
   top: 0px;
   left: 0px;
   font-size: 20px;
+}
+#img {
+  position: absolute;
+  width: 150px;
+  top: 350px;
+  left: 50px;
 }

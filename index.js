@@ -11,6 +11,7 @@ let windSpeed = document.getElementById("speed");
 let windDirection = document.getElementById("direction");
 let weatherH1 = document.getElementById("weather-h1");
 let curLocation = document.querySelector(".curLocation");
+let icon = document.getElementById("img");
 
 let apiKey = "001bc651977f4b024af4d84282b0f02a";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
@@ -49,8 +50,10 @@ function date() {
   } else {
     time.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
   }
+  navigator.geolocation.getCurrentPosition(handlePosition);
 }
 date();
+
 formSearch.addEventListener("submit", function (event) {
   event.preventDefault();
   city.innerHTML = cityInput.value;
@@ -67,6 +70,15 @@ searchButton.addEventListener("click", function (event) {
 
 let weatherTemp = document.querySelector(".inline");
 function showWeather(response) {
+  console.log(response);
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
   city.innerHTML = `${response.data.name}`;
   weatherTemp.innerHTML = `${Math.round(response.data.main.temp)} ℃`;
   windSpeed.innerHTML = `${response.data.wind.speed} m/sec`;
@@ -93,11 +105,13 @@ function showWeather(response) {
 
   farenheit.addEventListener("click", (event) => {
     event.preventDefault();
-    inline.innerHTML = `${Math.floor((response.data.main.temp * 9) / 5 + 32)}℉`;
+    inline.innerHTML = `${Math.floor(
+      (response.data.main.temp * 9) / 5 + 32
+    )} ℉`;
   });
   celcius.addEventListener("click", (event) => {
     event.preventDefault();
-    inline.innerHTML = `${Math.round(response.data.main.temp)}℃`;
+    inline.innerHTML = `${Math.round(response.data.main.temp)} ℃`;
   });
 }
 
