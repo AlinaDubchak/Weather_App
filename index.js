@@ -57,6 +57,10 @@ date();
 formSearch.addEventListener("submit", function (event) {
   event.preventDefault();
   city.innerHTML = cityInput.value;
+
+  axios
+    .get(`${apiUrl}q=${city.innerHTML}&appid=${apiKey}&units=metric`)
+    .then(showWeather);
 });
 
 searchButton.addEventListener("click", function (event) {
