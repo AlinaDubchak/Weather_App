@@ -15,6 +15,11 @@
   position: relative;
   padding: 30px 20px 30px 20px;
 }
+/* #forecast {
+  position: absolute;
+  bottom: 30px;
+  margin: 0;
+} */
 .bottom {
   display: flex;
   justify-content: center;
@@ -274,8 +279,10 @@ a {
 #img {
   position: absolute;
   top: 425px;
-  left: 530px;
+  left: 450px;
+  background-color: #dfd6f8;
+  border-radius: 50px;
 }
-.speed {
+#speed {
   color: #f65a87;
 }

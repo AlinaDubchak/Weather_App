@@ -40,6 +40,61 @@ const months = [
   "November",
   "December",
 ];
+function displayTime() {
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = "";
+  const times = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
+
+  times.forEach(function (time) {
+    forecastHTML += `
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">${time}</h5>
+            <i class="fa-solid fa-sun" id="weather-icon"></i>
+            <h5 class="card-title">10℃</h5>
+          </div>
+        </div>
+      </div>`;
+  });
+
+  forecastHTML = `
+    <section class="bottom">
+      <div class="row" id="bottom-panel">
+        ${forecastHTML}
+      </div>
+    </section>`;
+
+  forecastEl.innerHTML = forecastHTML;
+}
+function displayForecast() {
+  let forecastEl2 = document.querySelector("#forecast2");
+  let forecast2HTML = "";
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+  days.forEach(function (day) {
+    date = new Date();
+    forecast2HTML =
+      forecast2HTML +
+      ` <section class="next-day-forecast">
+            <div class="row">
+              <div class="col-sm-2">
+                <i class="fa-solid fa-sun" id="weather-icon"></i>
+              </div>
+              <div class="col">
+                <div>
+                  <ul>
+                    <li class="list-group-item">${day} ${
+        months[date.getMonth()]
+      } ${date.getDate()}</li>
+                    <li class="list-group-item">Sunny</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>`;
+    forecastEl2.innerHTML = forecast2HTML;
+  });
+}
 
 function date() {
   let date = new Date();
@@ -73,6 +128,21 @@ function showWeather(response) {
   let windDeg = response.data.wind.deg;
   const windDirectionEl = getWindDirection(windDeg);
   windDirection.innerHTML = windDirectionEl;
+
+  farenheit.addEventListener("click", (event) => {
+    event.preventDefault();
+    inline.innerHTML = `${Math.floor(
+      (response.data.main.temp * 9) / 5 + 32
+    )} ℉`;
+  });
+
+  celcius.addEventListener("click", (event) => {
+    event.preventDefault();
+    inline.innerHTML = `${Math.round(response.data.main.temp)} ℃`;
+  });
+
+  displayTime();
+  displayForecast();
 }
 
 function getWindDirection(deg) {
@@ -101,16 +171,6 @@ function handlePosition(position) {
 curLocation.addEventListener("click", function (event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
-});
-
-farenheit.addEventListener("click", (event) => {
-  event.preventDefault();
-  inline.innerHTML = `${Math.floor((response.data.main.temp * 9) / 5 + 32)} ℉`;
-});
-
-celcius.addEventListener("click", (event) => {
-  event.preventDefault();
-  inline.innerHTML = `${Math.round(response.data.main.temp)} ℃`;
 });
 
 formSearch.addEventListener("submit", function (event) {
