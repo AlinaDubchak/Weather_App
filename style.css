@@ -1,12 +1,12 @@
 .container {
   margin: 0 auto;
   margin-top: 50px;
-  background-color: #27374d;
+  background-color: #f6ebfd;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  border: 15px solid #526d82;
+  border: 15px solid #885df1;
   border-radius: 20px;
 
   font-family: Rubik, sans-serif;
@@ -41,12 +41,12 @@ div.card {
   text-align: center;
   height: 150px;
 
-  background: rgba(255, 255, 255, 0.192);
+  background: rgba(255, 255, 255, 0.589);
   backdrop-filter: blur(10px);
   border-radius: 15px;
-  color: #dde6ed;
+  color: #f65a87;
 
-  box-shadow: 5px 10px 15px #3c4955;
+  box-shadow: 5px 10px 15px #9aabb9;
 }
 div.col {
   padding: 0px 24px 0px 0px;
@@ -61,26 +61,26 @@ div.col {
   justify-content: right;
   margin-right: 28px;
   margin-top: 10px;
-  color: #dde6ed;
+  color: #272142;
   font-weight: 500;
 }
 .time {
-  color: #dde6ed;
+  color: #272142;
 
   margin-right: 28px;
   font-size: 18px;
-  border-left: 2px solid #dde6ed;
+  border-left: 2px solid #272142;
   border-radius: 1px;
   padding-left: 10px;
 }
 .day {
-  color: #dde6ed;
+  color: #272142;
 
   font-size: 18px;
   padding-right: 10px;
 }
 #main h1 {
-  color: #dde6ed;
+  color: #272142;
 
   text-align: right;
   font-size: 70px;
@@ -91,7 +91,7 @@ div.col {
   right: 30px;
 }
 #main hr {
-  border: 1px solid #dde6ed;
+  border: 1px solid #272142;
   opacity: 1;
   border-radius: 2px;
   position: relative;
@@ -101,10 +101,10 @@ div.col {
   width: 767px;
 }
 #right-panel {
-  border-left: 1px solid #dde6ed;
+  border-left: 1px solid #272142;
   padding: 30px 20px 30px 20px;
 
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.589);
   backdrop-filter: blur(10px);
   border-radius: 5px;
 }
@@ -118,7 +118,7 @@ div.col {
   margin: auto;
   justify-content: space-between;
   width: 250px;
-  border: 1px solid #dde6ed;
+  border: 1px solid #272142;
   border-radius: 5px;
   padding: 3px;
 }
@@ -135,21 +135,21 @@ div.col {
   right: 15px;
 }
 #right-panel h1 {
-  color: #dde6ed;
+  color: #272142;
 
   font-size: 70px;
   text-align: center;
   margin: 30px 0 15px 0;
 }
 #right-panel p {
-  color: #dde6ed;
+  color: #272142;
 
   font-size: 18px;
   text-align: center;
   padding-bottom: 20px;
 }
 #right-panel hr {
-  border: 1px solid #dde6ed;
+  border: 1px solid #272142;
   opacity: 1;
   border-radius: 2px;
   margin-left: auto;
@@ -161,7 +161,7 @@ h5 {
   padding: 15px;
 }
 strong {
-  color: #dde6ed;
+  color: #f65a87;
   font-weight: 400;
 }
 #weather-icon {
@@ -172,19 +172,19 @@ strong {
   margin: 5px 0 10px 0;
   text-align: center;
 
-  color: #dde6ed;
+  color: #272142;
 
-  background: rgba(255, 255, 255, 0.192);
+  background: rgba(255, 255, 255, 0.589);
   backdrop-filter: blur(10px);
   border-radius: 15px;
 
-  box-shadow: 5px 10px 15px #323c44;
+  box-shadow: 5px 10px 15px #9aabb9;
 }
 .next-day-forecast {
   margin-left: 20px;
 }
 li {
-  color: #dde6ed;
+  color: #272142;
 
   margin-left: -10px;
 }
@@ -192,20 +192,21 @@ li:first-child {
   font-weight: 500;
 }
 li:last-child {
+  color: #f65a87;
   opacity: 50%;
 }
 ul {
-  color: #dde6ed;
+  color: #272142;
 
   padding: 3px;
 }
 .custom-select {
   padding: 7px;
-  background-color: transparent;
+  background-color: #dfd6f8;
   width: 130px;
   height: 30px;
   margin: 3px 4px 2px 1px;
-  border: 1px solid #dde6ed;
+  border: none;
   border-radius: 3px;
 }
 p {
@@ -229,19 +230,19 @@ a {
   left: -12px;
   top: 0px;
   text-decoration: none;
-  color: #dde6ed;
+  color: #272142;
 }
 .farenheit {
   text-decoration: none;
-  color: #dde6ed;
+  color: #272142;
 }
 .btn_search {
   border-radius: 10px;
   background-color: transparent;
   padding: 5px;
   border: none;
-  background-color: #27374d;
-  color: #dde6ed;
+  background-color: #885df1;
+  color: #272142;
   font-size: 14px;
 
   width: 100px;
@@ -249,13 +250,13 @@ a {
 }
 .btn_search:hover {
   background-color: transparent;
-  color: #dde6ed;
-  border: 1px solid #dde6ed;
+  color: #272142;
+  border: 1px solid #885df1;
 }
 .curLocation {
   font-size: 14px;
   text-decoration: none;
-  color: #dde6ed;
+  color: #272142;
 }
 .author {
   margin: 15px 0px 0px 310px;
@@ -272,7 +273,9 @@ a {
 }
 #img {
   position: absolute;
-  width: 150px;
-  top: 350px;
-  left: 50px;
+  top: 425px;
+  left: 530px;
+}
+.speed {
+  color: #f65a87;
 }

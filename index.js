@@ -46,7 +46,7 @@ function date() {
   day.innerHTML = `${days[date.getDay()]} ${
     months[date.getMonth()]
   } ${date.getDate()}  ${date.getFullYear()}`;
-  if (date.getMinutes() < 10 && date.getHours() < 10) {
+  if (date.getMinutes() < 10 || date.getHours() < 10) {
     time.innerHTML = `${date.getHours()}:0${date.getMinutes()}`;
   } else {
     time.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
