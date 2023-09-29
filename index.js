@@ -14,7 +14,7 @@ let curLocation = document.querySelector(".curLocation");
 let icon = document.getElementById("img");
 let weatherTemp = document.querySelector(".inline");
 
-let apiKey = "001bc651977f4b024af4d84282b0f02a";
+let apiKey = "616b14cbd38253313b3b8852fa77335d";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
 
 const days = [
@@ -67,32 +67,60 @@ function displayTime() {
 
   forecastEl.innerHTML = forecastHTML;
 }
-function displayForecast() {
+
+function formatDay(timesTemp) {
+  let date = new Date(timesTemp * 1000);
+  let day = date.getDay();
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastEl2 = document.querySelector("#forecast2");
   let forecast2HTML = "";
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
-  days.forEach(function (day) {
-    date = new Date();
-    forecast2HTML =
-      forecast2HTML +
-      ` <section class="next-day-forecast">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecast2HTML =
+        forecast2HTML +
+        ` <section class="next-day-forecast">
             <div class="row">
               <div class="col-sm-2">
-                <i class="fa-solid fa-sun" id="weather-icon"></i>
+                <i class="" id="weather-icon">
+                <img 
+               src="http://openweathermap.org/img/wn/${
+                 forecastDay.weather[0].icon
+               }@2x.png"
+               /></i>
               </div>
               <div class="col">
                 <div>
                   <ul>
-                    <li class="list-group-item">${day} ${
-        months[date.getMonth()]
-      } ${date.getDate()}</li>
-                    <li class="list-group-item">Sunny</li>
+                  <div class="row">
+                  <div class="col">
+                   <li class="list-group-item" id="week-days">${formatDay(
+                     forecastDay.dt
+                   )}</li></div>
+                   <div class="col" id="temp-right"> <span>${Math.floor(
+                     forecastDay.temp.max
+                   )}°</span></div>
+                  </div>
+                   <div class="row">
+                   <div class="col"> <li class="list-group-item">${
+                     forecastDay.weather[0].main
+                   } </li></div>
+                    <div class="col" id="temp-right"> <span>${Math.floor(
+                      forecastDay.temp.min
+                    )}°</span></div>
+                 
+                   </div>
+                   
                   </ul>
                 </div>
               </div>
             </div>
           </section>`;
-    forecastEl2.innerHTML = forecast2HTML;
+      forecastEl2.innerHTML = forecast2HTML;
+    }
   });
 }
 
@@ -110,8 +138,12 @@ function date() {
 }
 date();
 
+function getForecast(coordinates) {
+  let apiUrl2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl2);
+  axios.get(apiUrl2).then(displayForecast);
+}
 function showWeather(response) {
-  console.log(response);
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -142,7 +174,9 @@ function showWeather(response) {
   });
 
   displayTime();
-  displayForecast();
+  // displayForecast();
+
+  getForecast(response.data.coord);
 }
 
 function getWindDirection(deg) {

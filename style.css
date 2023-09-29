@@ -170,9 +170,9 @@ strong {
   font-weight: 400;
 }
 #weather-icon {
-  font-size: 30px;
+  font-size: 35px;
   width: 55px;
-  padding: 10px;
+  padding: 7px;
   border-radius: 5px;
   margin: 5px 0 10px 0;
   text-align: center;
@@ -185,16 +185,24 @@ strong {
 
   box-shadow: 5px 10px 15px #9aabb9;
 }
+#weather-icon img {
+  width: 45px;
+}
 .next-day-forecast {
   margin-left: 20px;
 }
 li {
   color: #272142;
 
-  margin-left: -10px;
+  margin-left: 5px;
 }
-li:first-child {
+#temp-right {
+  text-align: right;
+}
+#week-days {
+  color: #272142;
   font-weight: 500;
+  opacity: 100%;
 }
 li:last-child {
   color: #f65a87;
