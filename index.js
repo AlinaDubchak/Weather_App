@@ -40,22 +40,36 @@ const months = [
   "November",
   "December",
 ];
-function displayTime() {
+function formatTime(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let hour = date.getHours();
+
+  return `${hour}:00`;
+}
+
+function displayTime(response) {
+  let forecast2 = response.data.hourly;
   let forecastEl = document.querySelector("#forecast");
   let forecastHTML = "";
-  const times = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
-  times.forEach(function (time) {
-    forecastHTML += `
+  forecast2.forEach(function (time, index) {
+    if (index < 7) {
+      forecastHTML += `
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">${time}</h5>
-            <i class="fa-solid fa-sun" id="weather-icon"></i>
-            <h5 class="card-title">10℃</h5>
+            <h5 class="card-title">${formatTime(time.dt)}</h5>
+            <i class="" id="weather-icon">
+             <img 
+               src="http://openweathermap.org/img/wn/${
+                 time.weather[0].icon
+               }@2x.png"
+               /></i>
+            <h5 class="card-title" id="temp-h5">${Math.floor(time.temp)}℃</h5>
           </div>
         </div>
       </div>`;
+    }
   });
 
   forecastHTML = `
@@ -140,8 +154,8 @@ date();
 
 function getForecast(coordinates) {
   let apiUrl2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl2);
   axios.get(apiUrl2).then(displayForecast);
+  axios.get(apiUrl2).then(displayTime);
 }
 function showWeather(response) {
   icon.setAttribute(
@@ -172,9 +186,6 @@ function showWeather(response) {
     event.preventDefault();
     inline.innerHTML = `${Math.round(response.data.main.temp)} ℃`;
   });
-
-  displayTime();
-  // displayForecast();
 
   getForecast(response.data.coord);
 }

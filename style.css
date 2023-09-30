@@ -87,13 +87,13 @@ div.col {
 #main h1 {
   color: #272142;
 
-  text-align: right;
+  text-align: left;
   font-size: 70px;
   font-weight: 500;
 
   position: relative;
   top: 320px;
-  right: 30px;
+  left: 30px;
 }
 #main hr {
   border: 1px solid #272142;
@@ -179,8 +179,6 @@ strong {
 
   color: #272142;
 
-  background: rgba(255, 255, 255, 0.589);
-  backdrop-filter: blur(10px);
   border-radius: 15px;
 
   box-shadow: 5px 10px 15px #9aabb9;
@@ -287,10 +285,13 @@ a {
 #img {
   position: absolute;
   top: 425px;
-  left: 450px;
+  left: 300px;
   background-color: #dfd6f8;
   border-radius: 50px;
 }
 #speed {
   color: #f65a87;
+}
+#temp-h5 {
+  margin-top: 14px;
 }
